@@ -1,7 +1,7 @@
 import { Store } from "redux";
 import { Task } from "redux-saga";
-import { ActionInterfaces } from "~/store/reducer";
 import { NextPageContext } from "next";
+import { GlobalInterfaces } from "~/store/global/reducers";
 
 export interface WithSagaTaskStore extends Store {
   sagaTask?: Task;
@@ -13,5 +13,5 @@ export interface WithReduxNextPageContext extends NextPageContext {
 
 // TODO add state interface
 export interface State {
-  getAction: ActionInterfaces;
+  getGlobal: GlobalInterfaces;
 }

@@ -1,0 +1,17 @@
+@import "styles/common/variable";
+@import "styles/common/normailze";
+
+@import "mainPage";
+
+@import "components/Module/UseFormInput";
+@import "components/Module/ProfileUpdatePopup";
+
+@import "components/Template/Register";
+
+@import "components/Layout/Header";
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

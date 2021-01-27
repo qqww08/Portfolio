@@ -1,0 +1,50 @@
+{
+  "user": [
+    {
+      "email": "2",
+      "id": 3
+    },
+    {
+      "email": "214@123",
+      "password": "124",
+      "name": "124",
+      "avatar": "uploads/1611764128800.PNG",
+      "id": 2
+    },
+    {
+      "email": "214@123",
+      "password": "124",
+      "name": "124",
+      "avatar": "uploads/1611764128800.PNG",
+      "id": 1
+    },
+    {
+      "email": "124@124",
+      "password": "124",
+      "name": "124",
+      "avatar": "uploads/1611764466903.png",
+      "id": 4
+    },
+    {
+      "email": "124@124",
+      "password": "124",
+      "name": "124",
+      "avatar": "uploads/1611764466903.png",
+      "id": 5
+    },
+    {
+      "email": "asd@qwe",
+      "password": "qw",
+      "name": "qwe",
+      "avatar": "uploads/1611764569651.png",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "email": "123@123",
+      "password": "123",
+      "name": "4444444454412",
+      "avatar": "uploads/1611765933388.png"
+    }
+  ]
+}

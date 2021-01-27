@@ -1,0 +1,11 @@
+.ufi-wrapper{
+  margin: 10px 0;
+  input{
+    width: 100%;
+  }
+  .ufi-error{
+    margin-top: 10px;
+    color:$error;
+    font-size: 12px;
+  }
+}

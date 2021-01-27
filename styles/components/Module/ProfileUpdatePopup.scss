@@ -1,0 +1,29 @@
+.pup-wrap{
+  position: fixed;
+  top:0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .pup-form{
+    position: relative;
+    width: 50%;
+    height: 80%;
+    background: #ffffff;
+    padding: 50px;
+   text-align: center;
+    .pup-avatar{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .pup-value{
+      text-align: start;
+      width: 100%;
+    }
+  }
+}

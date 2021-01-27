@@ -5,8 +5,7 @@ import withRedux from "next-redux-wrapper";
 import withReduxSaga from "next-redux-saga";
 import createStore from "../createStore";
 import { WithSagaTaskStore } from "../interfaces";
-
-
+import "../styles/index.scss";
 interface MyAppProps {
   store: WithSagaTaskStore;
 }
@@ -28,9 +27,7 @@ class MyApp extends App<MyAppProps> {
     return (
       <React.Fragment>
         <Provider store={store}>
-
-            <Component {...pageProps} />
-
+          <Component {...pageProps} />
         </Provider>
       </React.Fragment>
     );
