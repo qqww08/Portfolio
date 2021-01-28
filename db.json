@@ -46,5 +46,14 @@
       "name": "4444444454412",
       "avatar": "uploads/1611765933388.png"
     }
+  ],
+  "board": [
+    {
+      "id": 1,
+      "title": "",
+      "contents": "",
+      "createdAt": "",
+      "user": null
+    }
   ]
 }

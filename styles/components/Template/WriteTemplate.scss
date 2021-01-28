@@ -1,0 +1,15 @@
+.write-wrap {
+  .write-head-wrap{
+    display: flex;
+    margin-bottom: 10px;
+    .write-title {
+      width: 100%;
+    }
+    button{
+      margin-left: 10px;
+      flex:1;
+      white-space: nowrap;
+    }
+  }
+
+}

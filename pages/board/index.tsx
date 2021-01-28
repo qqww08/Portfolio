@@ -4,15 +4,14 @@ import { NextPage } from "next";
 import { useSelector } from "react-redux";
 import { loginCheck } from "~/utils/loginCheck";
 import { MeInterface } from "~/store/global/interfaces";
-
 import Header from "~/components/Layout/Header";
+import Board from "~/components/Template/Board";
 
 const Index: NextPage = () => {
   const me: MeInterface = useSelector((state: State) => state.getGlobal.me);
-
   return (
     <Header>
-      <div></div>
+      <Board />
     </Header>
   );
 };

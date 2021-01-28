@@ -29,7 +29,6 @@ const ProfileUpdatePopup = ({ close }: Props) => {
       name: data.name,
       avatar: avatar,
     };
-    console.log(obj);
     updateUserAPI(obj).then((res) => console.log(res));
   };
   return (
