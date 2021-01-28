@@ -7,6 +7,7 @@ export type Action = actionIs.GetMe;
 
 // 내 정보
 export function getMe(me): actionIs.GetMe {
+  console.log(me);
   return {
     type: actionTypes.GET_ME,
     me,

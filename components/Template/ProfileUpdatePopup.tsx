@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import { registerAPI, updateUserAPI, userAPI } from "~/APIs/users";
 import UseFormInput from "~/components/Module/UseFormInput";
@@ -6,6 +6,8 @@ import { MeInterface } from "~/store/global/interfaces";
 import { useSelector } from "react-redux";
 import { State } from "~/interfaces";
 import { imageUploadAPI } from "~/APIs/image";
+import { getMe } from "~/store/global/actions";
+import cookie from "js-cookie";
 interface Inputs {
   email: string;
   password: string;
@@ -29,8 +31,12 @@ const ProfileUpdatePopup = ({ close }: Props) => {
       name: data.name,
       avatar: avatar,
     };
-    updateUserAPI(obj).then((res) => console.log(res));
+    updateUserAPI(obj).then((res) => {
+      getMe(JSON.parse(cookie.get("user")));
+      close();
+    });
   };
+
   return (
     <div className="pup-wrap flex-center">
       <form onSubmit={handleSubmit(onSubmit)} className="pup-form">
@@ -69,4 +75,4 @@ const ProfileUpdatePopup = ({ close }: Props) => {
   );
 };
 
-export default ProfileUpdatePopup;
+export default React.memo(ProfileUpdatePopup);

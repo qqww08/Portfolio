@@ -21,14 +21,17 @@ html {
  */
 
 body {
-  margin: 0;
-  width: 100vw;
+  margin: 0 auto;
+
+}
+#__next{
+  margin: 0 auto;
+  width: 600px;
   height: 100vh;
   display: flex;
-  align-items: center;
+  padding-top: 30px;
   justify-content: center;
 }
-
 /**
  * Render the `main` element consistently in IE.
  */

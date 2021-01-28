@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import UseFormInput from "~/components/Module/UseFormInput";
 import { useForm } from "react-hook-form";
 import { imageUploadAPI } from "~/APIs/image";
@@ -15,17 +15,20 @@ const Register = () => {
   const uploadHandler = (e) => {
     imageUploadAPI(e).then((res) => setAvatar(res));
   };
-  const onSubmit = (data) => {
-    const obj = {
-      email: data.email,
-      password: data.password,
-      name: data.name,
-      avatar: avatar,
-    };
-    registerAPI(obj).then((res) => {
-      router.push("/").then(() => window.scrollTo(0, 0));
-    });
-  };
+  const onSubmit = useCallback(
+    (data) => {
+      const obj = {
+        email: data.email,
+        password: data.password,
+        name: data.name,
+        avatar: avatar,
+      };
+      registerAPI(obj).then((res) => {
+        router.push("/").then(() => window.scrollTo(0, 0));
+      });
+    },
+    [handleSubmit, avatar]
+  );
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="rg-wrap">
       <label htmlFor="img-up" className="rg-avatar">
@@ -68,4 +71,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default React.memo(Register);

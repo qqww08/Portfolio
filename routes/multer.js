@@ -22,7 +22,7 @@ const upload = multer({
   }),
 });
 router.post("/upload", upload.single("img"), (req, res) => {
-  res.json({ avatar: `uploads/${req.file.filename}` });
+  res.json({ avatar: `/uploads/${req.file.filename}` });
 });
 
 module.exports = router;

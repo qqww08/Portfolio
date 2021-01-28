@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
 import UseFormInput from "~/components/Module/UseFormInput";
 import { useRouter } from "next/router";
@@ -11,18 +11,24 @@ interface Inputs {
 const Login = () => {
   const { register, handleSubmit, errors } = useForm<Inputs>();
   const router = useRouter();
-  const onSubmit = (data) => {
-    userAPI().then((res) => {
-      const index = res.findIndex(
-        (e) => e.email === data.email && e.password === data.password
-      );
-      // index 가 1이상 이면 유저 정보가 있음
-      if (index > 0) {
-        cookie.set("user", JSON.stringify(res[index]));
-        router.push("/board").then(() => window.scrollTo(0, 0));
-      }
-    });
-  };
+  const onSubmit = useCallback(
+    (data) => {
+      userAPI().then((res) => {
+        const index = res.findIndex(
+          (e) => e.email === data.email && e.password === data.password
+        );
+        // index 가 1이상 이면 유저 정보가 있음
+        if (index > 0) {
+          delete res[index].password;
+          cookie.set("user", JSON.stringify(res[index]));
+          router.push("/board").then(() => window.scrollTo(0, 0));
+        } else {
+          alert("아이디나 패스워드가 일치 하지 않습니다.");
+        }
+      });
+    },
+    [handleSubmit]
+  );
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <UseFormInput

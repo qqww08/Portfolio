@@ -4,16 +4,18 @@
 //pages
 @import "mainPage";
 
-//Modile
+//Module
 @import "components/Module/UseFormInput";
 @import "components/Module/ProfileUpdatePopup";
 @import "components/Module/BoardItem";
-
+@import "components/Module/AvatarItem";
+@import "components/Module/CommentItem";
 //Template
 @import "components/Template/Register";
 @import "components/Template/Board";
 @import "components/Template/WriteTemplate";
-
+@import "components/Template/Detail";
+@import "components/Template/Comment";
 //Layout
 @import "components/Layout/Header";
 

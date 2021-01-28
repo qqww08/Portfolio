@@ -1,0 +1,19 @@
+.ci-wrap {
+  .ci-contents {
+    padding: 5px;
+    margin: 10px 0 ;
+    min-height: 50px;
+    max-height: 100%;
+  }
+
+  .ci-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ci-edit-btn{
+    button:first-child{
+      margin-right: 10px;
+    }
+  }
+}

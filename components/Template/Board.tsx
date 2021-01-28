@@ -1,7 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
-
-const Board = () => {
+import BoardItem from "~/components/Module/BoardItem";
+interface Props {
+  list: any;
+}
+const Board = ({ list }: Props) => {
   const router = useRouter();
   return (
     <div className="board-warp">
@@ -12,8 +15,11 @@ const Board = () => {
       >
         글쓰기
       </button>
+      {list?.map((item) => {
+        return <BoardItem list={item} key={item.id} />;
+      })}
     </div>
   );
 };
 
-export default Board;
+export default React.memo(Board);

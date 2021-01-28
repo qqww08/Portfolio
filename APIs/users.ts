@@ -15,6 +15,7 @@ export const userAPI = async () => {
 export const updateUserAPI = async (me) => {
   return await Axios.put(`/api/user/${me.id}`, me).then((res) => {
     userAPI().then((res: any) => {
+      console.log(res.filter((e) => e.id === me.id)[0]);
       getMe(res.filter((e) => e.id === me.id)[0]);
       cookie.set("user", JSON.stringify(res.filter((e) => e.id === me.id)[0]));
     });

@@ -8,52 +8,100 @@
       "email": "214@123",
       "password": "124",
       "name": "124",
-      "avatar": "uploads/1611764128800.PNG",
+      "avatar": "/uploads/1611764128800.PNG",
       "id": 2
     },
     {
       "email": "214@123",
       "password": "124",
       "name": "124",
-      "avatar": "uploads/1611764128800.PNG",
+      "avatar": "/uploads/1611764128800.PNG",
       "id": 1
     },
     {
       "email": "124@124",
       "password": "124",
       "name": "124",
-      "avatar": "uploads/1611764466903.png",
+      "avatar": "/uploads/1611764466903.png",
       "id": 4
     },
     {
       "email": "124@124",
       "password": "124",
       "name": "124",
-      "avatar": "uploads/1611764466903.png",
+      "avatar": "/uploads/1611764466903.png",
       "id": 5
     },
     {
       "email": "asd@qwe",
       "password": "qw",
       "name": "qwe",
-      "avatar": "uploads/1611764569651.png",
+      "avatar": "/uploads/1611764569651.png",
       "id": 6
     },
     {
       "id": 7,
       "email": "123@123",
-      "password": "123",
-      "name": "4444444454412",
-      "avatar": "uploads/1611765933388.png"
+      "password": "1111111",
+      "name": "444455111111",
+      "avatar": "/uploads/1611765933388.png"
+    },
+    {
+      "email": "1234@1234",
+      "password": "1234",
+      "name": "1234",
+      "avatar": "/uploads/1611844638366.PNG",
+      "id": 8
     }
   ],
   "board": [
     {
-      "id": 1,
-      "title": "",
-      "contents": "",
-      "createdAt": "",
-      "user": null
+      "title": "124",
+      "contents": "<p>241</p>",
+      "user": {
+        "id": 7,
+        "email": "123@123",
+        "name": "4444444454412",
+        "avatar": "/uploads/1611765933388.png"
+      },
+      "id": 4
+    },
+    {
+      "title": "sadas",
+      "contents": "<p>adsads1</p>",
+      "user": {
+        "id": 7,
+        "email": "123@123",
+        "password": "123",
+        "name": "12311",
+        "avatar": "/uploads/1611765933388.png"
+      },
+      "id": 5
+    },
+    {
+      "title": "111111111114444444444",
+      "contents": "<p>11111111111111111114444444444444444</p>",
+      "user": {
+        "id": 7,
+        "email": "123@123",
+        "password": "123",
+        "name": "444455",
+        "avatar": "/uploads/1611765933388.png"
+      },
+      "id": 6
+    },
+    {
+      "title": "44444444444",
+      "contents": "<p>444444444444444444111111111111</p>",
+      "user": {
+        "id": 7,
+        "email": "123@123",
+        "password": "123",
+        "name": "444455",
+        "avatar": "/uploads/1611765933388.png"
+      },
+      "id": 7
     }
-  ]
+  ],
+  "comment": []
 }

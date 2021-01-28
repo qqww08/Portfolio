@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import React, { useEffect } from "react";
 import { WithReduxNextPageContext } from "~/interfaces";
-import { useForm } from "react-hook-form";
 import Login from "~/components/Template/Login";
 
 const Index: NextPage = () => {

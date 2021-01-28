@@ -1,0 +1,27 @@
+.detail-wrap {
+  width: 100%;
+  .detail-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .detail-edit{
+    text-align: end;
+    margin-bottom: 20px;
+    button:first-child{
+      margin-right: 10px;
+    }
+  }
+  .detail-profile{
+    display: flex;
+    align-items: center;
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+  }
+}

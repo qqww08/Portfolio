@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 import { State } from "~/interfaces";
 import useModalState from "~/hooks/useModalState";
 import { createPortal } from "react-dom";
-import ProfileUpdatePopup from "~/components/Module/ProfileUpdatePopup";
-
+import ProfileUpdatePopup from "~/components/Template/ProfileUpdatePopup";
+import cookie from "js-cookie";
 const Portal = ({ children }) => {
   const modalRoot = document.getElementById("__portal");
 
@@ -14,12 +14,21 @@ const Portal = ({ children }) => {
 const Header = ({ children }: { children: ReactNode }) => {
   const me: MeInterface = useSelector((state: State) => state.getGlobal.me);
   const popup = useModalState();
+  const logoutHandler = () => {
+    cookie.remove("user");
+    window.location.reload();
+  };
   return (
     <div className="header-wrap">
       <div className="header-profile-wrap">
-        <img src={me.avatar} className="header-avatar" />
-        <p className="header-name">{me.name}</p>
-        <button onClick={popup.open}>수정</button>
+        <div className="header-profile-item">
+          <img src={me?.avatar} className="header-avatar" />
+          <p className="header-name">{me?.name}</p>
+        </div>
+        <div className="header-btn">
+          <button onClick={popup.open}>프로필 수정</button>
+          <button onClick={logoutHandler}>로그아웃</button>
+        </div>
       </div>
       {popup.if(
         <Portal>
@@ -31,4 +40,4 @@ const Header = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

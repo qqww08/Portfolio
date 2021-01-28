@@ -1,0 +1,15 @@
+.comment-wrap{
+  margin-top: 50px;
+  .comment-avatar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .comment-textarea{
+    padding: 10px;
+    margin: 10px 0;
+    width: 97%;
+    height: 100px;
+    resize: none;
+  }
+}

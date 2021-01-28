@@ -32,4 +32,4 @@ const UseFormInput = ({
   );
 };
 
-export default UseFormInput;
+export default React.memo(UseFormInput);
