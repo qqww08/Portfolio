@@ -19,7 +19,6 @@ const Login = () => {
         );
         // index 가 1이상 이면 유저 정보가 있음
         if (index > 0) {
-          delete res[index].password;
           cookie.set("user", JSON.stringify(res[index]));
           router.push("/board").then(() => window.scrollTo(0, 0));
         } else {

@@ -47,11 +47,11 @@
       "avatar": "/uploads/1611765933388.png"
     },
     {
+      "id": 8,
       "email": "1234@1234",
-      "password": "1234",
-      "name": "1234",
-      "avatar": "/uploads/1611844638366.PNG",
-      "id": 8
+      "password": "123",
+      "name": "12345",
+      "avatar": "/uploads/1611844638366.PNG"
     }
   ],
   "board": [

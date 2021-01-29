@@ -34,7 +34,6 @@ const Index = () => {
 };
 Index.getInitialProps = async ({ store, req }: WithReduxNextPageContext) => {
   await loginCheck(store, req);
-  store.dispatch(END);
   return;
 };
 export default Index;

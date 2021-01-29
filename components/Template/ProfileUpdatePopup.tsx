@@ -3,11 +3,10 @@ import { useForm } from "react-hook-form";
 import { registerAPI, updateUserAPI, userAPI } from "~/APIs/users";
 import UseFormInput from "~/components/Module/UseFormInput";
 import { MeInterface } from "~/store/global/interfaces";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { State } from "~/interfaces";
 import { imageUploadAPI } from "~/APIs/image";
 import { getMe } from "~/store/global/actions";
-import cookie from "js-cookie";
 interface Inputs {
   email: string;
   password: string;
@@ -20,6 +19,7 @@ const ProfileUpdatePopup = ({ close }: Props) => {
   const me: MeInterface = useSelector((state: State) => state.getGlobal.me);
   const [avatar, setAvatar] = useState<string>(me.avatar);
   const { register, handleSubmit, errors } = useForm<Inputs>();
+  const dispatch = useDispatch();
   const uploadHandler = (e) => {
     imageUploadAPI(e).then((res) => setAvatar(res));
   };
@@ -32,7 +32,7 @@ const ProfileUpdatePopup = ({ close }: Props) => {
       avatar: avatar,
     };
     updateUserAPI(obj).then((res) => {
-      getMe(JSON.parse(cookie.get("user")));
+      dispatch(getMe(res));
       close();
     });
   };

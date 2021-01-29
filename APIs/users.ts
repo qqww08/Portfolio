@@ -14,10 +14,10 @@ export const userAPI = async () => {
 //회원 정보 수정
 export const updateUserAPI = async (me) => {
   return await Axios.put(`/api/user/${me.id}`, me).then((res) => {
-    userAPI().then((res: any) => {
-      console.log(res.filter((e) => e.id === me.id)[0]);
-      getMe(res.filter((e) => e.id === me.id)[0]);
-      cookie.set("user", JSON.stringify(res.filter((e) => e.id === me.id)[0]));
+    return userAPI().then((res: any) => {
+      const medata = res.filter((e) => e.id === me.id)[0];
+      cookie.set("user", JSON.stringify(medata));
+      return medata;
     });
   });
 };

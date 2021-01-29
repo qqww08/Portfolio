@@ -10,7 +10,6 @@ import { getBoardListAPI } from "~/APIs/board";
 import Axios from "axios";
 
 const Index: NextPage = () => {
-  const me: MeInterface = useSelector((state: State) => state.getGlobal.me);
   const [list, setList] = useState(null);
   useEffect(() => {
     if (process.browser) {

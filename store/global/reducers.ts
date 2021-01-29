@@ -11,7 +11,6 @@ export const initialState: any = {
 const getGlobal = (state = initialState, action: Action): GlobalInterfaces => {
   switch (action.type) {
     case actionTypes.GET_ME:
-      console.log(action);
       return {
         ...state,
         me: action.me,
