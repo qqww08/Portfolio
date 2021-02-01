@@ -33,6 +33,7 @@ const Detail = ({ list, clearBoardHandler }: Props) => {
     // 제목이 비어있다면
     if (title === "" || contents === "") {
       alert("빈칸을 입력해주세요");
+      return
     }
     const obj = {
       title: title,
